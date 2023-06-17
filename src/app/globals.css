@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "~@fortawesome/fontawesome-free/css/all.css";
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -26,88 +24,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-    background:white;
 }
-
-.animate-char
-{
-   text-transform: capitalize;
-   background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #a855f7 29%,
-    #8b5cf6 67%,
-    #6366f1 100%
-  );
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
-  font-size: 25px;
-}
-
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
-}
-
-/* styles/global.css */
-.App {
-  text-align: center;
-}
-
-.button-gradient {
-  background: rgb(182,34,195);
-  background: linear-gradient(75deg, rgb(192, 55, 205) 0%, rgba(253,163,45,1) 100%);
-  border: none
-}
-
-.text-gradient {
-  text-transform: capitalize;
-  background-image: linear-gradient(-225deg, #231557 0%, #a855f7 29%, #8b5cf6 67%, #6366f1 100%);
-  background-size: 200% auto;
-  background-clip: border-box;
-  color: #fff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 4s linear infinite;
-  
-}
-.nav-gradient {
-  text-transform: capitalize;
-  background-image: linear-gradient(-225deg, #231557 0%, #a855f7 29%, #8b5cf6 67%, #6366f1 100%);
-  background-size: 200% auto;
-  background-clip: border-box;
-  color: #fff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 4s linear infinite;
-  
-}
-
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
