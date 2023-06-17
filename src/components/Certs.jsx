@@ -21,7 +21,7 @@ const Certs = () => {
     setShowCertificates(!showCertificates);
   };
   return (
-    <div className="dark:bg-slate-800 bg-white" >
+    <div className="dark:bg-slate-800 bg-white " >
       <div className="bg-indigo-50 rounded text-center  py-5 w-10/12 mx-auto dark:bg-slate-600 dark:rounded dark:border-none">
       <button onClick={toggleCertificates} className="block mx-auto mb-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-md font-medium hover:scale-105 transition-transform duration-200">
           {showCertificates ? 'Hide Certificates' : 'Show Certificates'}

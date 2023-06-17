@@ -25,7 +25,7 @@ const Projects = () => {
                     <p>Portfolio using React, Bootstrap, JavaScript, and CSS</p>
                   </div>
                   <div className="mt-4 ">
-                    <Link legacyBehavior href="https://github.com/zdotg/zg-portfolio">
+                    <Link legacyBehavior href="https://github.com/zdotg/portfolio-app">
                       <a className="px-4 py-2 inline-block bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-md font-medium hover:scale-105 transition-transform duration-200">View Code</a>
                     </Link>
                   </div>
