@@ -3,7 +3,7 @@ import React from "react";
 
 const Skills = () => {
   return (
-    <div className="flex justify-center bg-white text-slate-700 shadow-md" id="Skills">
+    <div className="flex justify-center bg-white text-slate-700 shadow-md  dark:bg-slate-800  " id="Skills">
       <div className="max-w-3/4">
         <h2 className="text-center text-3xl font-light py-5 animate-char">Skills</h2>
         <div className="row text-center my-auto py-5 flex justify-center">
@@ -17,7 +17,7 @@ const Skills = () => {
             </button>
           </div>
         </div>
-        <div className="row  py-5 text-center  text-slate-700 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="row  py-5 text-center  text-slate-700 grid grid-cols-1 md:grid-cols-3 gap-4 dark:text-slate-100">
           <div className="mb-3 leading-relaxed capitalize hover:scale-125 ">
             <ul>
               <li>HTML</li>

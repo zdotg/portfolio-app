@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 const Projects = () => {
   return (
-    <section className="bg-white text-slate-700" id="Portfolio">
+    <section className="bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-100" id="Portfolio">
       <div className="container mx-auto px-4 py-10">
         <h2 className="text-center text-3xl font-light py-5 animate-char">Projects</h2>
         <div className="flex flex-wrap justify-center columns-auto ">

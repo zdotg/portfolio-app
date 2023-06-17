@@ -12,7 +12,7 @@ const About = () => {
   };
 
   return (
-    <div className="mx-auto bg-white text-stone-700  p-5" id="About">
+    <div className="mx-auto bg-white text-stone-700 p-5 dark:bg-slate-800 dark:text-slate-100" id="About">
       <div className="container  shadow-md" >
         <div className="flex flex-col lg:flex-row items-center mx-auto" style={{maxWidth: "85%"}}>
           <div className="w-full md:w-1/2 pr-2">
@@ -27,7 +27,7 @@ const About = () => {
           </div>
           <div className="w-full md:w-1/2 pl-3">
             <div className="pb-2">
-              <h2 className="text-2xl font-light">
+              <h2 className="text-2xl font-light dark:text-slate-100">
                 About <span className="text-gradient">Me</span>
               </h2>
               <p className={`text-sm ${isExpanded ? "" : "line-clamp-5 overflow-hidden"}`}>

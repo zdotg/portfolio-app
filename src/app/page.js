@@ -1,4 +1,6 @@
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import "../styles/custom.css";
+import "./globals.css";
 import React from "react";
 import Head from "next/head";
 import NavBar from "@/components/NavBar";
@@ -16,6 +18,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Zach Gallman Portfolio</title>
+
         {/* Include other meta tags, stylesheets, or scripts */}
       </Head>
       <NavBar />

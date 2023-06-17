@@ -21,77 +21,77 @@ const Certs = () => {
     setShowCertificates(!showCertificates);
   };
   return (
-    <div>
-      <div className="bg-indigo-50  text-center  py-5 w-10/12 mx-auto">
-        <button onClick={toggleCertificates} className="block mx-auto mb-5 px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-md font-medium hover:scale-105 transition-transform duration-200">
+    <div className="dark:bg-slate-800 bg-white" >
+      <div className="bg-indigo-50 rounded text-center  py-5 w-10/12 mx-auto dark:bg-slate-600 dark:rounded dark:border-none">
+      <button onClick={toggleCertificates} className="block mx-auto mb-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-md font-medium hover:scale-105 transition-transform duration-200">
           {showCertificates ? 'Hide Certificates' : 'Show Certificates'}
         </button>
         {showCertificates && (
         <div className="flex flex-wrap justify-center ">
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-gradient">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-stone-700 dark:text-slate-100">
             <div>
               <Image className="transform hover:scale-110 transition-transform" src={HCJ} alt="Web Dev" />
               <p>Web Dev Fundamentals Bootcamp</p>
             </div>
           </div>
 
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-gradient">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-stone-700 dark:text-slate-100">
             <div>
               <Image className="transform hover:scale-110 transition-transform" src={DSA} alt="Web Dev" />
               <p>Python Fundamentals Data Structures, and Algorithms</p>
             </div>
           </div>
 
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-gradient">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-stone-700 dark:text-slate-100 ">
             <div>
               <Image className="transform hover:scale-110 transition-transform" src={SQLData} alt="Web Dev" />
               <p>SQL and Python</p>
             </div>
           </div>
 
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-gradient">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-stone-700 dark:text-slate-100">
             <div>
               <Image className="transform hover:scale-110 transition-transform" src={Modern} alt="Web Dev" />
               <p>Modern Software Engineering with DevOps</p>
             </div>
           </div>
 
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-gradient">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-stone-700 dark:text-slate-100">
             <div>
               <Image className="transform hover:scale-110 transition-transform" src={SQLDevops} alt="Web Dev" />
               <p>Backend Python, SQL, and Devops Bootcamp</p>
             </div>
           </div>
 
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-gradient">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-stone-700 dark:text-slate-100">
             <div>
               <Image className="transform hover:scale-110 transition-transform" src={Bootstrap} alt="Web Dev" />
               <p>Front-End Web UI Framework: Bootstrap</p>
             </div>
           </div>
 
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-gradient">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-stone-700 dark:text-slate-100">
             <div>
               <Image className="transform hover:scale-110 transition-transform" src={ReactCert} alt="Web Dev" />
               <p>Front End JavaScript Library: React</p>
             </div>
           </div>
 
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-gradient">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-stone-700 dark:text-slate-100">
             <div>
               <Image className="transform hover:scale-110 transition-transform" src={ReactNative} alt="Web Dev" />
               <p>Multiplatform Mobile App Development with React Native</p>
             </div>
           </div>
 
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-gradient">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-stone-700 dark:text-slate-100">
             <div>
               <Image className="transform hover:scale-110 transition-transform" src={FrontEnd} alt="Web Dev" />
               <p>Front End Web and Mobile Development Bootcamp</p>
             </div>
           </div>
 
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-gradient">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 text-stone-700 dark:text-slate-100">
             <div>
               <Image className="transform hover:scale-110 transition-transform" src={FullStack} alt="Web Dev" />
               <p>Server-side Development with NodeJS Express and MongoDB</p>

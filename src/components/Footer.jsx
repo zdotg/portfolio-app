@@ -1,9 +1,10 @@
 import React from "react";
-import "@fortawesome/fontawesome-free/css/all.css";
+
+
 
 const Footer = () => {
   return (
-    <footer className="text-center text-white bg-indigo-300 py-6">
+    <footer className="text-center text-hite bg-indigo-300 py-6 dark:bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="text-center">

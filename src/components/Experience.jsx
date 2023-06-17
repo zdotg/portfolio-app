@@ -1,87 +1,85 @@
-import React, { useState } from "react";
-import AboutMemoji from "../public/images/AboutMemoji.png";
-import Image from "next/image";
+'use client'
 
-const About = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
+import React, { useState } from 'react';
 
-  const handleToggle = () => {
-    setIsExpanded(!isExpanded);
+
+const Experience = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
-    <div className="mx-auto bg-white text-stone-700  p-5" id="About">
-      <div className="container  shadow-md" >
-        <div className="flex flex-col lg:flex-row items-center mx-auto" style={{maxWidth: "85%"}}>
-          <div className="w-full md:w-1/2 pr-2">
-            <Image
-              src={AboutMemoji}
-              alt="My memoji"
-              className="rounded-l-full"
-              style={{layout: "responsive", objectFit: "contain", objectPosition: "center"}}
-              quality={100}
-              priority
-            />
-          </div>
-          <div className="w-full md:w-1/2 pl-3">
-            <div className="pb-2">
-              <h2 className="text-2xl font-light">
-                About <span className="text-gradient">Me</span>
-              </h2>
-              <p className={`text-sm ${isExpanded ? "" : "line-clamp-5 overflow-hidden"}`}>
-                I am a passionate and driven individual who discovered my love
-                for web development during the height of the pandemic. As the
-                world faced unprecedented challenges, I found solace and
-                inspiration in the vast world of software engineering. This
-                newfound passion quickly turned into an obsession, leading me to
-                enroll in NuCamp, a comprehensive bootcamp.
-                {isExpanded && (
-                  <>
-                    {" "}
-                    Currently, I am on a transformative journey to become a full
-                    stack developer, focusing on industry-leading languages and
-                    technologies. My curriculum includes a wide range of topics
-                    such as web development fundamentals, HTML, CSS, JavaScript,
-                    server-side development with NodeJS, Express, and MongoDB,
-                    multiplatform mobile app development with React Native,
-                    front-end web UI frameworks like Bootstrap, front-end
-                    JavaScript library React, SDLC, Agile, DevOps, CI/CD, and
-                    deploying apps to top cloud providers including Amazon AWS,
-                    Microsoft Azure, and Google Cloud/Firestore. Additionally, I
-                    am building a strong foundation in Javascript fundamentals,
-                    data structures, algorithms, and SQL. Prior to my pursuit of
-                    a career in software engineering, I worked in the
-                    hospitality industry with a focus on concierge services and
-                    wine sales. However, driven by my passion for technology and
-                    the desire for a more impactful career, I have decided to
-                    transition into the dynamic and ever-evolving field of web
-                    development. With a blend of technical skills, a growth
-                    mindset, and a dedication to continuous learning, I am
-                    excited to contribute my knowledge and collaborate with
-                    like-minded professionals in a challenging and rewarding
-                    software engineering role. I am actively seeking
-                    opportunities where I can leverage my skills, adaptability,
-                    and enthusiasm to create innovative solutions and make a
-                    positive impact. I am open to new opportunities and would
-                    love to connect with companies that value creativity,
-                    collaboration, and a strong commitment to excellence. 
-                  </>
-                )}
-              </p>
-            </div>
-            <div className="pb-3">
-              <button
-                  className="mt-4 px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white     rounded-md font-medium hover:scale-105 transition-transform duration-200"
-                  onClick={handleToggle}
-                >
-              {isExpanded ? "Read Less" : "Read More"}
-              </button>
-            </div>
-          </div>
+    <div className="dark:bg-slate-800 bg-white">
+        <div className="flex-col rounded items-center justify-center dark:bg-slate-600 dark:rounded dark:border-none
+        px-12 py-5 w-10/12  mx-auto border flex text-center bg-indigo-50 text-slate-700">
+        <button onClick={toggleDropdown} className="px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-md font-medium place-content-center hover:scale-105 transition-transform duration-200">
+            Experience
+        </button>
+
+        <div className={`w-1/2 pt-5 px-4 dark:text-slate-100 ${isOpen ? '' : 'hidden'}`}>
+            <table className="border-none">
+            <thead>
+                <tr>
+                <th className="border border-none">
+                    <h4 className="text-center font-normal">
+                    <span className="text-gradient border-style-one ">Job</span> Experience
+                    </h4>
+                </th>
+                <th className="border-none font-light">Tenure</th>
+                </tr>
+            </thead>
+            <tbody className="divide-y divide-white">
+                <tr>
+                <td className="border border-none pr-4...">Crocodile Wine - Wine Sales Specialist</td>
+                <td className="border border-none ...">2021-present</td>
+                </tr>
+                <tr>
+                <td className="border border-none pr-4 ...">Windsor Boutique Hotel - Hotel Concierge</td>
+                <td className="border border-none ...">2020-present</td>
+                </tr>
+                <tr>
+                <td className="border border-none pr-4...">Wine Sales Specialist</td>
+                <td className="border border-none ..">2018-present</td>
+                </tr>
+                <tr>
+                <td className="border border-none pr-4...">Bottle Riot - Bartender</td>
+                <td className="border border-none ...">2017-2019</td>
+                </tr>
+            </tbody>
+            </table>
         </div>
-      </div>
+
+        <div className={`w-1/2 pt-5 dark:text-slate-100 ${isOpen ? '' : 'hidden'}`}>
+            <table className="border border-none">
+            <thead>
+                <tr>
+                <th className="border border-none px-3">
+                    <h4 className="text-center font-normal">
+                    <span className="text-gradient border-style-one">Academic</span> Qualifications
+                    </h4>
+                </th>
+                <th className="border border-none px-3 font-light">Graduated</th>
+                </tr>
+            </thead>
+            <tbody className="divide-y divide-white pt-3">
+                <tr>
+                <td className="border border-none px-3...">
+                    NuCamp&apos;s Full Stack Mobile and Web Development Bootcamp
+                </td>
+                <td className="border border-none px-3 ...">May 2023</td>
+                </tr>
+                <tr>
+                <td className="border border-none px-3 ...">B.S. from The University of Montevallo</td>
+                <td className="border border-none px-3 ...">May 2013</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        </div>
     </div>
   );
 };
 
-export default About;
+export default Experience;

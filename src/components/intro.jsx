@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Intro = () => {
   return (
-    <div className="p-5 bg-white text-stone-700 font-light shadow-md">
+    <div className="p-5 bg-white text-stone-700 font-light shadow-md dark:text-slate-100  dark:bg-slate-800 ">
       <div className="container">
         <div className="flex flex-col lg:flex-row items-center mx-auto" style={{maxWidth: "85%"}}>
           <div className="flex flex-col lg:w-2/3">
@@ -15,7 +15,7 @@ const Intro = () => {
                 <span className="text-gradient">A</span> Full Stack{" "}
                 <span className="text-gradient">Web Developer</span>
               </h3>
-              <small className=" mt-2">
+              <small className=" mt-2 dark:text-slate-100">
                 Utilizing a blend of technical skills, a growth mindset, and a
                 dedication to continuous learning!
               </small>
@@ -31,8 +31,6 @@ const Intro = () => {
               <Image
                 src={emoji}
                 alt="My memoji"
-                // width={250}
-                // height={250}
                 className="rounded-full"
                 style={{layout: "responsive", objectFit: "contain", objectPosition: "center"}}
                 quality={100}
