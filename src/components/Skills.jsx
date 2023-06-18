@@ -18,7 +18,7 @@ const Skills = () => {
           </div>
         </div>
         <div className="row  py-5 text-center  text-slate-700 grid grid-cols-1 md:grid-cols-3 gap-4 dark:text-slate-100">
-          <div className="mb-3 leading-relaxed capitalize hover:scale-115 ">
+          <div className="mb-3 leading-relaxed capitalize hover:scale-125 ">
             <ul>
               <li>HTML</li>
               <li>CSS</li>
@@ -34,7 +34,7 @@ const Skills = () => {
               <li>DevOps</li>
             </ul>
           </div>
-          <div className="mb-3 leading-relaxed capitalize hover:scale-115">
+          <div className="mb-3 leading-relaxed capitalize hover:scale-125">
             <ul>
               <li>SCSS</li>
               <li>Responsive Web Design</li>
@@ -50,7 +50,7 @@ const Skills = () => {
               <li>React.Js</li>
             </ul>
           </div>
-          <div className="mb-3 leading-relaxed capitalize hover:scale-115">
+          <div className="mb-3 leading-relaxed capitalize hover:scale-125">
             <ul>
               <li>Redux/Context</li>
               <li>Dependencies</li>

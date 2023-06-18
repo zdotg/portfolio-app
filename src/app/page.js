@@ -17,10 +17,6 @@ export default function Home() {
     <div>
       <Head>
         <title>Zach Gallman Portfolio</title>
-        <script
-          src="https://kit.fontawesome.com/f38f31d1bf.js"
-          crossorigin="anonymous"
-        ></script>
         {/* Include other meta tags, stylesheets, or scripts */}
       </Head>
       <NavBar />

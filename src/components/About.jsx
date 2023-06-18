@@ -12,8 +12,8 @@ const About = () => {
   };
 
   return (
-    <div className="mx-auto bg-white text-stone-700 p-5 dark:bg-slate-800 dark:text-slate-100" id="About">
-      <div className="container  shadow-md" >
+    <div className=" bg-white text-stone-700 p-5 dark:bg-slate-800 dark:text-slate-100" id="About">
+      <div className="container mx-auto shadow-md" >
         <div className="flex flex-col lg:flex-row items-center mx-auto" style={{maxWidth: "85%"}}>
           <div className="w-full md:w-1/2 pr-2">
             <Image

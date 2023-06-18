@@ -6,7 +6,7 @@ import Link from "next/link";
 const Intro = () => {
   return (
     <div className="p-5 bg-white text-stone-700 font-light  dark:text-slate-100  dark:bg-slate-800 ">
-      <div className="container shadow-md">
+      <div className="container mx-auto shadow-md">
         <div className="flex flex-col lg:flex-row items-center mx-auto" style={{maxWidth: "85%"}}>
           <div className="flex flex-col lg:w-2/3">
             <div className="pb-2">
