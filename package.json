@@ -7,7 +7,7 @@
     "build": "cross-env BASE_PATH='/portfolio-app' next build && next export",
     "start": "next start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "deploy": "gh-pages -d out -f"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
