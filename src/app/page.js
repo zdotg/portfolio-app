@@ -12,6 +12,11 @@ import Projects from "@/components/Projects";
 import Contact from "../components/Contact";
 import Footer from "@/components/Footer";
 
+export const metadata = {
+  title: "Zach Gallman SWE Portfolio",
+  description: "A personal portfolio using Next.Js, React, and TailwindCSS",
+};
+
 export default function Home() {
   return (
     <div>

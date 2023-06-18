@@ -1,11 +1,8 @@
+"use client";
+
 import { useEffect } from "react";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata = {
-  title: "Zach Gallman SWE Portfolio",
-  description: "A personal portfolio using Next.Js, React, and TailwindCSS",
-};
 
 export default function RootLayout({ children }) {
   useEffect(() => {
