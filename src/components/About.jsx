@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from "react";
-import AboutMemoji from "../public/images/AboutMemoji.png";
+import AboutMemoji from "../../public/images/AboutMemoji.png";
 import Image from "next/image";
 
 const About = () => {

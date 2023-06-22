@@ -1,5 +1,5 @@
 import "../styles/custom.css";
-import "./globals.css";
+import "../styles/globals.css";
 import React from "react";
 import Head from "next/head";
 import NavBar from "@/components/NavBar";
@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zach Gallman Portfolio</title>
         {/* Include other meta tags, stylesheets, or scripts */}
@@ -37,6 +37,6 @@ export default function Home() {
       </main>
       <Footer />
       {/* Include a footer component if needed */}
-    </div>
+    </>
   );
 }

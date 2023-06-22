@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import emoji from "../public/images/emoji-sticker.png";
+import emoji from "../../public/images/emoji-sticker.png";
 import Link from "next/link";
 
 const Intro = () => {

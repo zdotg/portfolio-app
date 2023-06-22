@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import portfolio from "../public/images/portfolio.png";
-import wineShop from "../public/images/little-wine-shop.png";
-import photography from "../public/images/photography.png";
+import portfolio from "../../public/images/portfolio.png";
+import wineShop from "../../public/images/little-wine-shop.png";
+import photography from "../../public/images/photography.png";
 import Image from 'next/image'
 
 const Projects = () => {

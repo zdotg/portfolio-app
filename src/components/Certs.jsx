@@ -2,16 +2,16 @@
 
 import React, {useState} from "react";
 import Image from "next/image";
-import Bootstrap from "../public/images/certificates/Bootstrap.png";
-import DSA from "../public/images/certificates/Data_StructuresandAlgos.png";
-import ReactNative from "../public/images/certificates/React_Native.png";
-import FrontEnd from "../public/images/certificates/Front_End_WebandMobile.png";
-import FullStack from "../public/images/certificates/Full_Stack_WebandMobile.png";
-import HCJ from "../public/images/certificates/HTML_CSS_JS.png";
-import ReactCert from "../public/images/certificates/React.png";
-import SQLDevops from "../public/images/certificates/Sql_Devops_Python.png";
-import Modern from "../public/images/certificates/ModernSWE.png";
-import SQLData from "../public/images/certificates/Sql_Data_MOdeling.png";
+import Bootstrap from "../../public/images/certificates/Bootstrap.png";
+import DSA from "../../public/images/certificates/Data_StructuresandAlgos.png";
+import ReactNative from "../../public/images/certificates/React_Native.png";
+import FrontEnd from "../../public/images/certificates/Front_End_WebandMobile.png";
+import FullStack from "../../public/images/certificates/Full_Stack_WebandMobile.png";
+import HCJ from "../../public/images/certificates/HTML_CSS_JS.png";
+import ReactCert from "../../public/images/certificates/React.png";
+import SQLDevops from "../../public/images/certificates/Sql_Devops_Python.png";
+import Modern from "../../public/images/certificates/ModernSWE.png";
+import SQLData from "../../public/images/certificates/Sql_Data_MOdeling.png";
 
 const Certs = () => {
 
