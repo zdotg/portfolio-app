@@ -3,8 +3,8 @@ const nextConfig = {};
 
 module.exports = {
   ...nextConfig,
-  assetPrefix: process.env.BASE_PATH,
-  basePath: process.env.BASE_PATH,
+  assetPrefix: process.env.NODE_ENV === "production" ? "/portfolio-app" : "",
+  basePath: process.env.NODE_ENV === "production" ? "/portfolio-app" : "",
   output: "export",
   images: {
     unoptimized: true,
