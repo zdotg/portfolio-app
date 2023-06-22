@@ -10,7 +10,7 @@ const Intro = () => {
         <div className="flex flex-col lg:flex-row items-center mx-auto max-w-3xl">
           <div className="flex flex-col lg:w-2/3">
             <div className="pb-2">
-              <h2 className="text-3xl lg:text-4xl mt-2">Hi, I'm Zach</h2>
+              <h2 className="text-3xl lg:text-4xl mt-2">Hi, I&apos;m Zach</h2>
               <h3 className="text-2xl lg:text-3xl">
                 <span className="text-gradient">A</span> Full Stack{" "}
                 <span className="text-gradient">Web Developer</span>
