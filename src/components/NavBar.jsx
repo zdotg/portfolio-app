@@ -1,43 +1,35 @@
 'use client'
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { useEffect } from "react";
+import { faBars, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(localStorage.theme === 'dark' ? true : false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
   useEffect(() => {
     let themeToggle = document.getElementById('themeToggle');
     if (themeToggle) {
       themeToggle.addEventListener('click', function() {
         let htmlClasses = document.querySelector('html').classList;
-        if(localStorage.theme == 'dark') {
+        if(isDarkMode) {
           htmlClasses.remove('dark');
           localStorage.removeItem('theme')
-          document.getElementById('themeIcon').classList.remove('fa-sun');
-          document.getElementById('themeIcon').classList.add('fa-moon');
-          document.querySelector('#themeToggle span').innerText = 'Switch to Dark Mode';
+          setIsDarkMode(false);
         } else {
           htmlClasses.add('dark');
           localStorage.theme = 'dark';
-          document.getElementById('themeIcon').classList.remove('fa-moon');
-          document.getElementById('themeIcon').classList.add('fa-sun');
-          document.querySelector('#themeToggle span').innerText = 'Switch to Light Mode';
+          setIsDarkMode(true);
         }
       });
     }
-
-    if(localStorage.theme === 'dark') {
-      document.querySelector('html').classList.add('dark');
-      document.getElementById('themeIcon').classList.remove('fa-moon');
-      document.getElementById('themeIcon').classList.add('fa-sun');
-      document.querySelector('#themeToggle span').innerText = 'Switch to Light Mode';
-    }
-  }, []);
+  }, [isDarkMode]);
 
   return (
     <nav className="bg-white dark:bg-slate-900 p-4">
@@ -51,7 +43,7 @@ const NavBar = () => {
           className="md:hidden"
           onClick={toggleMenu}
         >
-          <span className="fas fa-bars text-stone-700"></span>
+          <FontAwesomeIcon icon={faBars} className="text-stone-700" />
         </button>
         <div className={`md:flex items-center ${isOpen ? '' : 'hidden'}`}>
           <ul className="md:flex space-x-4 nav-gradient">
@@ -76,10 +68,10 @@ const NavBar = () => {
               </Link>
             </li>
           </ul>
-          <button id="themeToggle" className=" text-gradient font-bold py-2  px-4 rounded inline-flex items-center">
-              <i id="themeIcon" className="fas fa-moon"></i>
-              <span className="pl-2">Switch to Dark</span>
-            </button>
+          <button id="themeToggle" className="text-gradient font-bold py-2  px-4 rounded inline-flex items-center">
+              <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} className="mr-2 text-purple-500"/>
+              <span className="pl-2">{isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}</span>
+          </button>
         </div>
       </div>
     </nav>
