@@ -63,6 +63,7 @@ const Projects = () => {
                 src={photography}
                 className="w-full h-1/2  object-cover"
                 alt="Photography Portfolio"
+                priority
               />
               <div className="flex flex-grow p-4">
                 <div className="flex flex-col justify-between h-full">
