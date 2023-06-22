@@ -4,32 +4,43 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { faBars, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Cookies from 'universal-cookie';
 
 const NavBar = () => {
+  const cookies = new Cookies();
   const [isOpen, setIsOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(localStorage.theme === 'dark' ? true : false);
+  const [icon, setIcon] = useState(faMoon);
+  const [text, setText] = useState("Switch to Dark Mode");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
+  
   useEffect(() => {
     let themeToggle = document.getElementById('themeToggle');
     if (themeToggle) {
       themeToggle.addEventListener('click', function() {
         let htmlClasses = document.querySelector('html').classList;
-        if(isDarkMode) {
+        if(cookies.get('theme') == 'dark') {
           htmlClasses.remove('dark');
-          localStorage.removeItem('theme')
-          setIsDarkMode(false);
+          cookies.remove('theme');
+          setIcon(faMoon);
+          setText('Switch to Dark Mode');
         } else {
           htmlClasses.add('dark');
-          localStorage.theme = 'dark';
-          setIsDarkMode(true);
+          cookies.set('theme', 'dark');
+          setIcon(faSun);
+          setText('Switch to Light Mode');
         }
       });
     }
-  }, [isDarkMode]);
+
+    if(cookies.get('theme') === 'dark') {
+      document.querySelector('html').classList.add('dark');
+      setIcon(faSun);
+      setText('Switch to Light Mode');
+    }
+  }, []);
 
   return (
     <nav className="bg-white dark:bg-slate-900 p-4">
@@ -68,9 +79,9 @@ const NavBar = () => {
               </Link>
             </li>
           </ul>
-          <button id="themeToggle" className="text-gradient font-bold py-2  px-4 rounded inline-flex items-center">
-              <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} className="mr-2 text-purple-500"/>
-              <span className="pl-2">{isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}</span>
+          <button id="themeToggle" className=" text-gradient font-bold py-2  px-4 rounded inline-flex items-center">
+              <FontAwesomeIcon id="themeIcon" icon={icon} className="mr-2 text-purple-500"/>
+              <span className="pl-2">{text}</span>
           </button>
         </div>
       </div>
