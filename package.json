@@ -8,8 +8,7 @@
     "start": "next start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d out -f"
-  },
-  
+  },  
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
