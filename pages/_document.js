@@ -13,7 +13,7 @@ class MyDocument extends Document {
           />
           <script
             src="https://kit.fontawesome.com/f38f31d1bf.js"
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
           ></script>
         </Head>
         <body className="inter">
