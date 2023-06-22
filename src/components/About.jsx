@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useState } from "react";
-import AboutMemoji from "../../public/images/AboutMemoji.png";
 import Image from "next/image";
+import AboutMemoji from "../../public/images/AboutMemoji.png";
 
 const About = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -12,20 +12,21 @@ const About = () => {
   };
 
   return (
-    <div className=" bg-white text-stone-700 p-5 dark:bg-slate-800 dark:text-slate-100" id="About">
-      <div className="container mx-auto shadow-md" >
-        <div className="flex flex-col lg:flex-row items-center mx-auto" style={{maxWidth: "85%"}}>
-          <div className="w-full md:w-1/2 pr-2">
+    <div className="bg-white text-stone-700 p-5 dark:bg-slate-800 dark:text-slate-100" id="About">
+      <div className="container mx-auto shadow-md">
+        <div className="flex flex-col lg:flex-row items-center mx-auto max-w-7xl">
+          <div className="w-full md:w-1/2 ">
             <Image
               src={AboutMemoji}
               alt="My memoji"
               className="rounded-l-full"
-              style={{layout: "responsive", objectFit: "contain", objectPosition: "center"}}
+              height={350}
+              width={350}
               quality={100}
               priority
             />
           </div>
-          <div className="w-full md:w-1/2 pl-3">
+          <div className="w-full md:w-1/2">
             <div className="pb-2">
               <h2 className="text-2xl font-light dark:text-slate-100">
                 About <span className="text-gradient">Me</span>
@@ -37,7 +38,7 @@ const About = () => {
                 inspiration in the vast world of software engineering. This
                 newfound passion quickly turned into an obsession, leading me to
                 enroll in NuCamp, a comprehensive bootcamp.
-                {isExpanded && (
+                {isExpanded ? (
                   <>
                     {" "}
                     Currently, I am on a transformative journey to become a full
@@ -68,15 +69,15 @@ const About = () => {
                     love to connect with companies that value creativity,
                     collaboration, and a strong commitment to excellence. 
                   </>
-                )}
+                ) : null}
               </p>
             </div>
             <div className="pb-3">
               <button
-                  className="mt-4 px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white     rounded-md font-medium hover:scale-105 transition-transform duration-200"
-                  onClick={handleToggle}
-                >
-              {isExpanded ? "Read Less" : "Read More"}
+                className="mt-4 px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-md font-medium hover:scale-105 transition-transform duration-200"
+                onClick={handleToggle}
+              >
+                {isExpanded ? "Read Less" : "Read More"}
               </button>
             </div>
           </div>
