@@ -40,7 +40,7 @@ const NavBar = () => {
       setIcon(faSun);
       setText('Switch to Light Mode');
     }
-  }, []);
+  }, [cookies]);
 
   return (
     <nav className="bg-white dark:bg-slate-900 p-4">
