@@ -40,11 +40,11 @@ const NavBar = () => {
       setIcon(faSun);
       setText('Switch to Light Mode');
     }
-  }, [cookies]);
+  }, []);
 
   return (
     <nav className="bg-white dark:bg-slate-900 p-4">
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 flex justify-between items-center text-base">
         <Link href="/">
           <div className="text-3xl font-light text-stone-700 cursor-pointer dark:text-slate-100">
             Zach <span className="text-gradient">Gallman</span>;
@@ -54,10 +54,10 @@ const NavBar = () => {
           className="md:hidden"
           onClick={toggleMenu}
         >
-          <FontAwesomeIcon icon={faBars} className="text-stone-700" />
+          <FontAwesomeIcon icon={faBars} className="text-stone-300" />
         </button>
         <div className={`md:flex items-center ${isOpen ? '' : 'hidden'}`}>
-          <ul className="md:flex space-x-4 nav-gradient">
+          <ul className="md:flex space-x-4 nav-gradient ">
             <li className="nav-item">
               <Link href="#About">
                 <div className="text-stone-700 cursor-pointer">About Me</div>
@@ -79,9 +79,9 @@ const NavBar = () => {
               </Link>
             </li>
           </ul>
-          <button id="themeToggle" className=" text-gradient font-bold py-2  px-4 rounded inline-flex items-center">
-              <FontAwesomeIcon id="themeIcon" icon={icon} className="mr-2 text-purple-500"/>
-              <span className="pl-2">{text}</span>
+          <button id="themeToggle" className=" text-gradient py-1 px-2 rounded inline-flex items-center">
+              <FontAwesomeIcon id="themeIcon" icon={icon} className="mr-2 text-purple-500" />
+              <span className="pl-1">{text}</span>
           </button>
         </div>
       </div>
